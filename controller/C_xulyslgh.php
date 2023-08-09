@@ -1,0 +1,22 @@
+<?php 
+	if(isset($_GET['cong'])){
+        for($i=1;$i<=$slmax;$i++){
+        if($_GET['cong']==$i){
+		if($_SESSION['gh'][$i]['sl']==$_SESSION['gh'][$i]['slmax']){
+            $_SESSION['gh'][$i]['sl']+=0;
+		}
+		else{ $_SESSION['gh'][$i]['sl']+=1;}}}
+    }
+	if(isset($_GET['tru'])){
+        for($i=1;$i<=$slmax;$i++){
+        if($_GET['tru']==$i){
+		if($_SESSION['gh'][$i]['sl']>0){
+            $_SESSION['gh'][$i]['sl']-=1;}}}}
+     if(isset($_GET['xoa'])){
+        for($i=1;$i<=$slmax;$i++){
+        if($_GET['xoa']==$i){
+            $_SESSION['gh'][$i]=null;
+            unset($_SESSION['gh'][$i]);
+        }}
+    }
+?>

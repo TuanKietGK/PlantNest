@@ -1,0 +1,10 @@
+<?php
+if(isset($_POST['dangky'])){
+    if($_POST['dangky']=='true'){
+        require_once('controller/C_xulydk.php');
+    }
+}
+else{
+    require_once('view/dangky.php');
+}
+ ?>
